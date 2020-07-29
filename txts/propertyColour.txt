@@ -1,0 +1,40 @@
+NULL
+Brown
+NULL
+Brown
+NULL
+Station
+Light Blue
+NULL
+Light Blue
+Light Blue
+NULL
+Purple
+Utility
+Purple
+Purple
+Station
+Orange
+NULL
+Orange
+Orange
+NULL
+Red
+NULL
+Red
+Red
+Station
+Yellow
+Yellow
+Utility
+Yellow
+NULL
+Green
+Green
+NULL
+Green
+Station
+NULL
+Blue
+NULL
+Blue
