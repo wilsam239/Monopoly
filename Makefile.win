@@ -1,18 +1,18 @@
-# Project: Monopoly v2
+# Project: Monopoly v3
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-RES      = Monopoly_v2_private.res
-OBJ      = main.o player.o square.o $(RES)
-LINKOBJ  = main.o player.o square.o $(RES)
-LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
-INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
-CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = "Monopoly v2.exe"
-CXXFLAGS = $(CXXINCS) 
-CFLAGS   = $(INCS) 
+RES      = Monopoly_v3_private.res
+OBJ      = main.o player.o gameTile.o $(RES)
+LINKOBJ  = main.o player.o gameTile.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib"
+INCS     = 
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
+BIN      = "Monopoly v3.exe"
+CXXFLAGS = $(CXXINCS) -Wall -Wextra
+CFLAGS   = $(INCS) -Wall -Wextra
 RM       = rm.exe -f
 
 .PHONY: all all-before all-after clean clean-custom
@@ -31,9 +31,9 @@ main.o: main.cpp
 player.o: player.cpp
 	$(CPP) -c player.cpp -o player.o $(CXXFLAGS)
 
-square.o: square.cpp
-	$(CPP) -c square.cpp -o square.o $(CXXFLAGS)
+gameTile.o: gameTile.cpp
+	$(CPP) -c gameTile.cpp -o gameTile.o $(CXXFLAGS)
 
-Monopoly_v2_private.res: Monopoly_v2_private.rc 
-	$(WINDRES) -i Monopoly_v2_private.rc --input-format=rc -o Monopoly_v2_private.res -O coff 
+Monopoly_v3_private.res: Monopoly_v3_private.rc 
+	$(WINDRES) -i Monopoly_v3_private.rc --input-format=rc -o Monopoly_v3_private.res -O coff 
 
